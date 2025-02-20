@@ -1,0 +1,5 @@
+<div class="P-language-header">
+    <p *ngFor="let lang of filteredLanguages()" class="P-lang-item" (click)="changeLanguage(lang)">
+        {{ lang.name }}
+    </p>
+</div>

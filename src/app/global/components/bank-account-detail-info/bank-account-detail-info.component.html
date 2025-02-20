@@ -1,0 +1,59 @@
+<div class="P-detail-block">
+
+    <div class="P-card-info-block">
+        <div class="P-bg-img" [bgImage]="data.img"></div>
+
+
+        <div class="P-account-info-block">
+            <h1 class="P-title">{{'accountType' | translate}}</h1>
+            <p class="P-title-for-content P-accountType">{{data.accountType}}</p>
+        </div>
+    </div>
+
+
+    <div class="P-transaction-info">
+        <div class="P-account-info-block">
+            <h1 class="P-title">{{'accountNumber' | translate}}</h1>
+
+            <p class="P-title-for-content P-account-number-part">
+                {{data.accountNumber | maskedInfo: '*' : 4: data.isShowAccountNumber}}
+
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    (click)="data.isShowAccountNumber  = !data.isShowAccountNumber">
+                    <circle cx="12" cy="12" r="12" fill="white" fill-opacity="0.6" />
+                    <circle cx="12" cy="12" r="11.75" stroke="#4D4D4D" stroke-opacity="0.7" stroke-width="0.5" />
+                    <path
+                        d="M12 16.8471C16.7706 16.8471 20 13.1639 20 12.0207C20 10.8831 16.7647 7.2 12 7.2C7.29412 7.2 4 10.8831 4 12.0207C4 13.1639 7.29412 16.8471 12 16.8471ZM12 15.1012C10.2059 15.1012 8.77647 13.6989 8.76471 12.0263C8.75882 10.303 10.2059 8.94018 12 8.94018C13.7882 8.94018 15.2353 10.303 15.2353 12.0263C15.2353 13.6989 13.7882 15.1012 12 15.1012ZM12 13.1696C12.6647 13.1696 13.2059 12.6515 13.2059 12.0263C13.2059 11.3956 12.6647 10.8718 12 10.8718C11.3353 10.8718 10.7941 11.3956 10.7941 12.0263C10.7941 12.6515 11.3353 13.1696 12 13.1696Z"
+                        fill="#4D4D4D" fill-opacity="0.9" />
+                </svg>
+
+            </p>
+        </div>
+
+
+        <div class="P-account-info-block">
+            <h1 class="P-title">{{'currencyWord' | translate}}</h1>
+            <p class="P-title-for-content">{{data.currency}}</p>
+        </div>
+
+        <div class="P-account-info-block">
+            <h1 class="P-title">{{'balanceWord' | translate}}</h1>
+
+            <p class="P-title-for-content P-account-number-part">
+                {{data.balance | maskedInfo: '.' : 0: data.isShowBalance}}
+
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    (click)="data.isShowBalance  = !data.isShowBalance">
+                    <circle cx="12" cy="12" r="12" fill="white" fill-opacity="0.6" />
+                    <circle cx="12" cy="12" r="11.75" stroke="#4D4D4D" stroke-opacity="0.7" stroke-width="0.5" />
+                    <path
+                        d="M12 16.8471C16.7706 16.8471 20 13.1639 20 12.0207C20 10.8831 16.7647 7.2 12 7.2C7.29412 7.2 4 10.8831 4 12.0207C4 13.1639 7.29412 16.8471 12 16.8471ZM12 15.1012C10.2059 15.1012 8.77647 13.6989 8.76471 12.0263C8.75882 10.303 10.2059 8.94018 12 8.94018C13.7882 8.94018 15.2353 10.303 15.2353 12.0263C15.2353 13.6989 13.7882 15.1012 12 15.1012ZM12 13.1696C12.6647 13.1696 13.2059 12.6515 13.2059 12.0263C13.2059 11.3956 12.6647 10.8718 12 10.8718C11.3353 10.8718 10.7941 11.3956 10.7941 12.0263C10.7941 12.6515 11.3353 13.1696 12 13.1696Z"
+                        fill="#4D4D4D" fill-opacity="0.9" />
+                </svg>
+
+            </p>
+        </div>
+    </div>
+
+
+</div>

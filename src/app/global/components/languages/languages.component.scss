@@ -1,0 +1,27 @@
+.P-language-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 40px;
+    position: absolute;
+    left: 0;
+    right: 0;
+
+
+    .P-lang-item {
+        font-family: Roboto;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16.41px;
+        letter-spacing: 0%;
+        color: #4D4D4D;
+        padding-right: 10px;
+        padding-left: 10px;
+        border-right: 1px solid gray;
+        cursor: pointer;
+
+        &:last-child {
+            border-right: 0;
+        }
+    }
+}

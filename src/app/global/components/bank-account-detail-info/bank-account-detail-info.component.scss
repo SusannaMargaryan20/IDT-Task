@@ -1,0 +1,96 @@
+:host {
+    width: 100%;
+}
+
+.P-card-info-block , .P-transaction-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.P-title {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14.06px;
+    letter-spacing: 0%;
+    color: #4D4D4D80;
+}
+
+.P-detail-block {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 15px;
+    border-bottom: 0.7px solid #FF4733;
+
+    .P-bg-img {
+        min-width: 90px;
+        height: 60px;
+        border-radius: 10px;
+        background-position: 100% 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 1px solid;
+    }
+
+    .P-account-info-block {
+        min-width: 115px;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        flex-direction: column;
+
+        .P-accountType {
+            max-width: 115px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: block;
+        }
+
+        .P-title-for-content {
+            font-family: Roboto;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 16.41px;
+            letter-spacing: 0%;
+            color: #4D4D4D;
+        }
+
+        .P-account-number-part {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+
+            svg {
+                width: 18px;
+                height: 18px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+@media(max-width: 768px) {
+    .P-detail-block {
+        justify-content: flex-start;
+        flex-direction: column;
+
+        .P-card-info-block , .P-transaction-info  {
+            width: 100%;
+        }
+
+        .P-transaction-info {
+            justify-content: space-between;
+        }   
+
+        .P-account-info-block > .P-accountType {
+            max-width: 100% !important; 
+        }
+    }
+}

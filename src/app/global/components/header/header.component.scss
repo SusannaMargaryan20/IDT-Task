@@ -1,0 +1,266 @@
+.P-header-block {
+    width: 100%;
+    height: 50px;
+    position: sticky;
+    background: #4D4D4D;
+    box-shadow: 0px 4px 5px -2px #0000002B;
+    box-shadow: 0px 8px 20px -3px #00000026;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .P-logo {
+        min-width: 100px;
+    }
+
+    .P-settings-block {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        .P-additional-info-block {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+
+            .P-search-input {
+                width: 166px;
+                height: 24px;
+                border: 1px solid white;
+                display: flex;
+                align-items: center;
+                padding: 0 15px;
+                gap: 8px;
+                border-radius: 16px;
+
+                input {
+                    border: none;
+                    width: 100px;
+                    height: 100%;
+                    color: white;
+
+                    &::placeholder {
+                        font-family: Roboto;
+                        font-weight: 400;
+                        font-size: 10px;
+                        line-height: 11.72px;
+                        letter-spacing: 0%;
+                        color: white;
+                    }
+                }
+            }
+
+            @media(max-width: 1024px) {
+                .P-search-input {
+                    width: auto !important;
+
+                    input {
+                        display: none;
+                    }
+                }
+
+                .P-search-input:focus-within,
+                .P-search-input:active,
+                .P-search-input>input:active {
+
+                    input {
+                        position: absolute;
+                        display: flex;
+                        border: 1px solid #4D4D4D;
+                        top: 60px;
+                        z-index: 5555555555;
+                        width: auto;
+                        height: 40px;
+                        left: 15px;
+                        right: 15px;
+                        padding: 0;
+                        border-radius: 15px;
+                        text-indent: 15px;
+                        color: #4D4D4D;
+                        background: white;
+
+                        &::placeholder {
+                            font-size: 14px;
+                            color: #4D4D4D;
+                        }
+
+                    }
+                }
+            }
+
+            .P-user-settings {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+
+
+                .P-user-block {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+
+                    .P-user-additional-info {
+                        z-index: 9999999999;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+                        position: absolute;
+                        width: 250px;
+                        height: 240px;
+                        top: 54px;
+                        border-radius: 10px;
+                        border-width: 1px;
+                        border: 1px solid #FFFFFF;
+                        box-shadow: 0px 0px 8px 0px #0000002B;
+
+                        box-shadow: 0px 8px 20px -3px #00000026;
+
+                        box-shadow: 0px -1.5px 0px 0px #FFFFFF40 inset;
+
+                        box-shadow: 0px -0.5px 0px 0px #00000033 inset;
+
+                        backdrop-filter: blur(100px);
+                        background: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.3) 100%);
+
+
+                        .P-close-btn {
+                            cursor: pointer;
+                            padding: 10px 5px 0 0;
+                        }
+
+                        .P-company-info {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            padding: 10px;
+                            border-bottom: 1px solid #4D4D4D80;
+
+                            .P-company-title-img-block {
+                                display: flex;
+                                align-items: center;
+                                gap: 5px;
+
+                                .P-company-name {
+                                    font-family: Roboto;
+                                    font-weight: 700;
+                                    font-size: 12px;
+                                    leading-trim: Cap height;
+                                    line-height: 15px;
+                                    letter-spacing: 0px;
+                                    color: #4D4D4D;
+                                }
+                            }
+
+                            .P-position-title {
+                                font-family: Roboto;
+                                font-weight: 400;
+                                font-size: 10px;
+                                line-height: 10px;
+                                letter-spacing: 0px;
+                                text-align: right;
+                                color: #4D4D4D;
+                                word-break: break-word;
+                            }
+                        }
+                    }
+
+                    .P-user-info {
+                        display: flex;
+                        align-items: flex-start;
+                        gap: 8px;
+                        flex-direction: column;
+                        cursor: pointer;
+
+                        .P-user-name {
+                            font-family: Roboto;
+                            font-weight: 500;
+                            font-size: 12px;
+                            line-height: 12px;
+                            letter-spacing: 0%;
+                            text-align: right;
+                            color: white;
+                        }
+
+                        .P-passport-info-block {
+                            font-family: Roboto;
+                            font-weight: 400;
+                            font-size: 10px;
+                            line-height: 12px;
+                            letter-spacing: 0%;
+                            text-align: right;
+                            color: white;
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
+                        }
+                    }
+
+                    .P-user-img {
+                        min-width: 26px;
+                        min-height: 26px;
+                    }
+                }
+
+                app-languages {
+                    ::ng-deep {
+                        .P-language-header {
+                            position: relative;
+                            left: auto;
+                            right: auto;
+                            padding: 10px;
+
+                            .P-lang-item {
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .P-header-block {
+        padding: 10px !important;
+    }
+
+    .P-settings-block {
+        gap: 4px !important;
+
+        .P-user-settings {
+            gap: 4px !important;
+
+            app-languages {
+                ::ng-deep {
+                    .P-language-header {
+                        padding: 0 !important;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .P-additional-info-block {
+        gap: 6px !important;
+    }
+
+    .P-logo {
+        min-width: auto !important;
+
+        svg {
+            width: 80px;
+            height: 30px;
+        }
+    }
+
+    .P-user-info {
+        display: none !important;
+    }
+
+}
